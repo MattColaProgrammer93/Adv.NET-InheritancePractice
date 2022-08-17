@@ -32,6 +32,7 @@
             this.lstCandies = new System.Windows.Forms.ListBox();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.btnClearBoxes = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btnDisplayCandy
@@ -68,12 +69,22 @@
             this.btnClearBoxes.TabIndex = 3;
             this.btnClearBoxes.Text = "Clear TextBoxes";
             this.btnClearBoxes.UseVisualStyleBackColor = true;
+            this.btnClearBoxes.Click += new System.EventHandler(this.btnClearBoxes_Click);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(76, 284);
+            this.maskedTextBox1.Mask = "00000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(125, 27);
+            this.maskedTextBox1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.btnClearBoxes);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.lstCandies);
@@ -91,5 +102,6 @@
         private ListBox lstCandies;
         private TextBox txtInput;
         private Button btnClearBoxes;
+        private MaskedTextBox maskedTextBox1;
     }
 }
