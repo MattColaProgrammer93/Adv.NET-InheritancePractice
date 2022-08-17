@@ -30,6 +30,8 @@
         {
             this.btnDisplayCandy = new System.Windows.Forms.Button();
             this.lstCandies = new System.Windows.Forms.ListBox();
+            this.txtInput = new System.Windows.Forms.TextBox();
+            this.btnClearBoxes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDisplayCandy
@@ -40,6 +42,7 @@
             this.btnDisplayCandy.TabIndex = 0;
             this.btnDisplayCandy.Text = "Display Candy";
             this.btnDisplayCandy.UseVisualStyleBackColor = true;
+            this.btnDisplayCandy.Click += new System.EventHandler(this.btnDisplayCandy_Click);
             // 
             // lstCandies
             // 
@@ -50,16 +53,35 @@
             this.lstCandies.Size = new System.Drawing.Size(214, 144);
             this.lstCandies.TabIndex = 1;
             // 
+            // txtInput
+            // 
+            this.txtInput.Location = new System.Drawing.Point(76, 234);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(125, 27);
+            this.txtInput.TabIndex = 2;
+            // 
+            // btnClearBoxes
+            // 
+            this.btnClearBoxes.Location = new System.Drawing.Point(283, 234);
+            this.btnClearBoxes.Name = "btnClearBoxes";
+            this.btnClearBoxes.Size = new System.Drawing.Size(155, 49);
+            this.btnClearBoxes.TabIndex = 3;
+            this.btnClearBoxes.Text = "Clear TextBoxes";
+            this.btnClearBoxes.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClearBoxes);
+            this.Controls.Add(this.txtInput);
             this.Controls.Add(this.lstCandies);
             this.Controls.Add(this.btnDisplayCandy);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -67,5 +89,7 @@
 
         private Button btnDisplayCandy;
         private ListBox lstCandies;
+        private TextBox txtInput;
+        private Button btnClearBoxes;
     }
 }
