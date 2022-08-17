@@ -11,5 +11,10 @@ namespace InheritancePractice
         public string Name { get; set; }
 
         public string Flavor { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name}'s flavor is {Flavor}";
+        }
     }
 }
