@@ -28,6 +28,12 @@ namespace InheritancePractice
         private void ClearTextBox(TextBoxBase box)
         {
             box.Clear();
+            // If the box is MaskedTextBox, set the maskBox/box to empty string
+            // This reduces the big amount of code to a smaller code using this syntax
+            if (box is MaskedTextBox maskBox)
+            {
+                maskBox.Mask = "";
+            }
         }
 
         private void btnClearBoxes_Click(object sender, EventArgs e)
